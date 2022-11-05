@@ -1,0 +1,143 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html, body{
+   min-height: 100vh;
+   font-family: 'Red Hat Text', sans-serif;
+}
+
+.wrapper{
+   height: 100vh;
+   position: relative;
+   background-color: hsl(235, 16%, 14%);
+   overflow: hidden;
+} 
+
+.container{
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+
+/* main */
+
+main{
+   max-width: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 60px;
+   align-items: center;
+}
+
+h1{
+   color: white;
+   letter-spacing: 2px;
+   z-index: 998;
+}
+
+.coundown{
+   max-width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   flex-wrap: wrap;
+}
+
+.card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   z-index: 999;
+   position: relative;
+   border-radius: 10px;
+}
+
+.card::after{
+   position: absolute;
+   content: "";
+   width: 8%;
+   height: 10%;
+   background:  hsl(235, 16%, 14%);
+   bottom: 54%;
+   transform: translateY(-54%);
+   left: 0;
+   border-radius: 0 50% 80% 0;
+}
+
+.card::before{
+   position: absolute;
+   content: "";
+   width: 8%;
+   height: 10%;
+   background:  hsl(235, 16%, 14%);
+   bottom: 54%;
+   transform: translateY(-54%);
+   right: 0;
+   border-radius: 50% 0 0 80%;
+}
+
+.card div{
+   color: hsl(345, 95%, 68%);
+   padding: 25px;
+   display: flex;
+   align-items: center;
+   background: linear-gradient(hsl(234, 17%, 12%) 50%, hsl(236, 21%, 26%) 50%);
+   font-size: 60px;
+
+}
+
+.card p{
+   margin-top: 20px;
+   font-size: 18px;
+   letter-spacing: 3px;
+   color: hsl(236, 21%, 26%)
+}
+
+/* footer */
+
+footer{
+   z-index: 999;
+}
+
+footer a{
+   margin-right: 20px;
+}
+
+footer a:hover img{
+   -webkit-filter: sepia(1) hue-rotate(310deg) saturate(10);
+  filter: sepia(1) hue-rotate(310deg) saturate(10);
+}
+
+.stars{
+   position: absolute;
+}
+
+.hills{
+   position: absolute;
+   bottom: 0;
+}
+
+@media (min-width: 1440px){
+   .hills img, .stars img{
+      width: 1600px;
+   }
+}
+
+@media (min-width: 1600px){
+   .hills img, .stars img{
+      width: 1920px;
+   }
+}
+
+@media (max-width: 470px){
+   h1{
+      font-size: 22px;
+   }
+}
+
